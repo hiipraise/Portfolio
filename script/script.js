@@ -76,3 +76,41 @@ window.addEventListener("resize", updateScroll);
 
 // Initial state setup
 updateScroll();
+
+const accordionHeaders = document.querySelectorAll(".accordion-header-1");
+const accordionHeaders2 = document.querySelectorAll(".accordion-header-2");
+const accordionHeaders3 = document.querySelectorAll(".accordion-header-3");
+const accordionHeaders4 = document.querySelectorAll(".accordion-header-4");
+const chevron = document.getElementById("fa-chevron-down-1");
+const chevron2 = document.getElementById("fa-chevron-down-2");
+const chevron3 = document.getElementById("fa-chevron-down-3");
+const chevron4 = document.getElementById("fa-chevron-down-4");
+
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle("active");
+    chevron.classList.toggle("rotate");
+  });
+});
+accordionHeaders2.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle("active");
+    chevron2.classList.toggle("rotate");
+  });
+});
+accordionHeaders3.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle("active");
+    chevron3.classList.toggle("rotate");
+  });
+});
+accordionHeaders4.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle("active");
+    chevron4.classList.toggle("rotate");
+  });
+});
