@@ -114,3 +114,37 @@ accordionHeaders4.forEach((header) => {
     chevron4.classList.toggle("rotate");
   });
 });
+
+
+
+// Get the button
+let backToTopButton = document.getElementById("backToTop");
+
+// Show the button when the user scrolls down 100px from the top of the document
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+// When the user clicks on the button, scroll to the top of the document smoothly
+backToTopButton.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This enables smooth scrolling
+    });
+};
+
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
