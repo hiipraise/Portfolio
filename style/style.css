@@ -172,6 +172,7 @@ ul {
   border: 2px solid #000;
 }
 .img-1 {
+  /* background-image: url(../image/trenchbro.gif); */
   background-image: url(../image/praisechinedu.png);
   background-position: center;
   object-fit: cover;
@@ -497,6 +498,9 @@ ul {
   color: #585f6f;
   margin-top: 20px;
 }
+.project-btn-a {
+  text-decoration: none;
+}
 .portfolio-project-btn {
   background-color: #583fbc;
   color: #fff;
@@ -508,6 +512,10 @@ ul {
   font-weight: 700;
   border-radius: 15px;
   margin-top: 20px;
+  /* cursor: not-allowed; */
+  cursor: pointer;
+}
+.portfolio-project-btn-2 {
   cursor: not-allowed;
 }
 .svg-btn-icon {
