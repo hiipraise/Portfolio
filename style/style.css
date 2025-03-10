@@ -446,6 +446,7 @@ ul {
 .portfolio-project-box,
 .portfolio-project-box-2,
 .portfolio-project-box-3 {
+  padding: 40px;
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -454,7 +455,7 @@ ul {
   border-radius: 30px;
   background-color: #defcff;
   overflow: hidden;
-  padding-top: 40px;
+  /* padding-top: 40px; */
 }
 .portfolio-box-img-1 {
   position: relative;
@@ -464,7 +465,6 @@ ul {
   position: relative;
   left: 50px;
   top: 30px;
-  transform: rotate(-15deg);
   box-shadow: -6px 2px 10px rgb(0, 0, 0, 0.2);
 }
 .portfolio-box-text {
@@ -515,9 +515,7 @@ ul {
   /* cursor: not-allowed; */
   cursor: pointer;
 }
-.portfolio-project-btn-2 {
-  cursor: not-allowed;
-}
+
 .svg-btn-icon {
   margin-left: 10px;
 }
