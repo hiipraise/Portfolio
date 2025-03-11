@@ -30,33 +30,28 @@ window.onclick = function (event) {
 const outerWrapper = document.getElementById("reviewBox");
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
-const div1 = document.getElementById("reviewOne");
-const div2 = document.getElementById("reviewTwo");
+const divs = document.querySelectorAll(".each-review");
 
-let currentDiv = 0; // Current visible div (0 = div1, 1 = div2)
-// let currentDiv2 = 1; // Current visible div 2
+let currentDiv = 0; // Tracks the active review div
 
-// Update scroll display and button states
 function updateScroll() {
   if (window.innerWidth <= 450) {
-    // Handle small screen: Show one div at a time
-    if (currentDiv === 0) {
-      div1.style.display = "flex";
-      div2.style.display = "none";
-    } else if (currentDiv === 1) {
-      div1.style.display = "none";
-      div2.style.display = "flex";
-    }
+    // Mobile: Show one review div at a time
+    divs.forEach((div, index) => {
+      div.style.display = index === currentDiv ? "flex" : "none";
+    });
   } else {
-    const offset = currentDiv * 100; // Each div is 100% of the container width
-    outerWrapper.style.transform = `translateX(-${offset}%)`;
+    // Desktop: Scroll smoothly between sections
+    const offset = outerWrapper.clientWidth * currentDiv;
+    outerWrapper.style.scrollBehavior = "smooth";
+    outerWrapper.scrollLeft = offset;
   }
-  // Disable buttons if at boundaries
+
+  // Disable buttons if at the start or end
   arrowLeft.classList.toggle("disabled", currentDiv === 0);
-  arrowRight.classList.toggle("disabled", currentDiv === 1);
+  arrowRight.classList.toggle("disabled", currentDiv === divs.length - 1);
 }
 
-// Scroll to the left div
 function scrollDivLeft() {
   if (currentDiv > 0) {
     currentDiv--;
@@ -64,18 +59,21 @@ function scrollDivLeft() {
   }
 }
 
-// Scroll to the right div
 function scrollRight() {
-  if (currentDiv < 1) {
+  if (currentDiv < divs.length - 1) {
     currentDiv++;
     updateScroll();
   }
 }
 
+// Attach event listeners
+arrowLeft.addEventListener("click", scrollDivLeft);
+arrowRight.addEventListener("click", scrollRight);
 window.addEventListener("resize", updateScroll);
 
-// Initial state setup
+// Initial setup
 updateScroll();
+
 
 const accordionHeaders = document.querySelectorAll(".accordion-header-1");
 const accordionHeaders2 = document.querySelectorAll(".accordion-header-2");
