@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Author" content="Praise Chinedu" />
+    <meta name="description" content="Praise Chinedu Portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praise Chinedu | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=javascript"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../image/hiipraise.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/contact.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a class="header-name-a" href="../index.html"> Praise Chinedu </a>
+      </div>
+      <div class="nav-container">
+        <i
+          class="fa fa-bars"
+          id="menu-icon"
+          onclick="toggleMenu()"
+          aria-hidden="true"
+        ></i>
+        <nav id="dropdown">
+          <ul>
+            <li>
+              <a class="list-a" href="../index.html#about-me">About me</a>
+            </li>
+            <li><a class="list-a" href="../index.html#project">Project</a></li>
+            <li>
+              <a class="list-a" href="../index.html#client-review">Review</a>
+            </li>
+            <li><a class="list-a" href="../index.html#faq">FAQ</a></li>
+            <li><a class="list-a" href="../index.html#socials">Socials</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <div class="contact-blur">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 1325 1212"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_f_2004_1065)">
+              <path
+                d="M924.551 563.162C924.551 700.128 807.249 811.162 662.551 811.162C517.852 811.162 400.551 700.128 400.551 563.162C400.551 426.195 517.852 315.162 662.551 315.162C807.249 315.162 924.551 426.195 924.551 563.162Z"
+                fill="url(#paint0_radial_2004_1065)"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_2004_1065"
+                x="0.550537"
+                y="-84.8384"
+                width="1324"
+                height="1296"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="200"
+                  result="effect1_foregroundBlur_2004_1065"
+                />
+              </filter>
+              <radialGradient
+                id="paint0_radial_2004_1065"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(141.157 -924.838) rotate(62.9063) scale(2695.99 8401.12)"
+              >
+                <stop offset="0.292419" stop-color="#9BFFA5" />
+                <stop offset="0.473798" stop-color="#AED3FF" />
+                <stop offset="0.549708" stop-color="#C9D4EF" />
+                <stop offset="0.657456" stop-color="#D798E1" />
+                <stop offset="0.817708" stop-color="#CACFFA" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="contact-form-container">
+          <h2 class="contact-form-head">Get in Touch</h2>
+          <p class="contact-form-info">
+            I'm always open to new opportunities and collaborations. Feel free
+            to reach out!
+          </p>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+          <div id="notification" style="display: none">
+            Message sent successfully!
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-bottom">
+        <div>
+          <p class="footer-text">
+            Got a question?
+            <a
+              class="footer-text-email"
+              href="mailto:info.praisechinedu@gmail.com"
+            >
+              info.praisechinedu@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="footer-text">
+          <p>2025 &copy; hiipraise</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../script/contact.js"></script>
+  </body>
+</html>

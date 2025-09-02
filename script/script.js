@@ -26,55 +26,6 @@ window.onclick = function (event) {
   }
 };
 
-// Review Scroll
-const outerWrapper = document.getElementById("reviewBox");
-const arrowLeft = document.getElementById("arrowLeft");
-const arrowRight = document.getElementById("arrowRight");
-const divs = document.querySelectorAll(".each-review");
-
-let currentDiv = 0; // Tracks the active review div
-
-function updateScroll() {
-  if (window.innerWidth <= 450) {
-    // Mobile: Show one review div at a time
-    divs.forEach((div, index) => {
-      div.style.display = index === currentDiv ? "flex" : "none";
-    });
-  } else {
-    // Desktop: Scroll smoothly between sections
-    const offset = outerWrapper.clientWidth * currentDiv;
-    outerWrapper.style.scrollBehavior = "smooth";
-    outerWrapper.scrollLeft = offset;
-  }
-
-  // Disable buttons if at the start or end
-  arrowLeft.classList.toggle("disabled", currentDiv === 0);
-  arrowRight.classList.toggle("disabled", currentDiv === divs.length - 1);
-}
-
-function scrollDivLeft() {
-  if (currentDiv > 0) {
-    currentDiv--;
-    updateScroll();
-  }
-}
-
-function scrollRight() {
-  if (currentDiv < divs.length - 1) {
-    currentDiv++;
-    updateScroll();
-  }
-}
-
-// Attach event listeners
-arrowLeft.addEventListener("click", scrollDivLeft);
-arrowRight.addEventListener("click", scrollRight);
-window.addEventListener("resize", updateScroll);
-
-// Initial setup
-updateScroll();
-
-
 const accordionHeaders = document.querySelectorAll(".accordion-header-1");
 const accordionHeaders2 = document.querySelectorAll(".accordion-header-2");
 const accordionHeaders3 = document.querySelectorAll(".accordion-header-3");
@@ -113,36 +64,36 @@ accordionHeaders4.forEach((header) => {
   });
 });
 
-
-
 // Get the button
 let backToTopButton = document.getElementById("backToTop");
 
 // Show the button when the user scrolls down 100px from the top of the document
-window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
-    }
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
 };
 
 // When the user clicks on the button, scroll to the top of the document smoothly
-backToTopButton.onclick = function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // This enables smooth scrolling
-    });
+backToTopButton.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // This enables smooth scrolling
+  });
 };
 
-
 // Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
     });
   });
 });
