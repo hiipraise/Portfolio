@@ -433,10 +433,14 @@ ul {
 }
 .portfolio-project {
   font-weight: 600;
-  font-size: 56px;
+  font-size: 48px;
   line-height: 61.6px;
   text-align: center;
   color: #242a41;
+  @media (max-width: 500px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 .portfolio-box {
   display: flex;
@@ -497,10 +501,7 @@ ul {
   margin-top: 20px;
 }
 .project-btn-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+  text-decoration: underline;
   color: #fff;
   margin-top: 20px;
 }
@@ -864,9 +865,6 @@ footer {
 
   /* section 3 */
 
-  .portfolio-project {
-    font-size: 50px;
-  }
   .portfolio-project-box,
   .portfolio-project-box-2,
   .portfolio-project-box-3 {
@@ -1083,10 +1081,6 @@ footer {
 
   /* section 3 */
 
-  .portfolio-project {
-    font-size: 50px;
-  }
-
   .portfolio-box-text {
     width: 300px;
     font-size: 25px;
@@ -1273,10 +1267,6 @@ footer {
   }
 
   /* section 3 */
-
-  .portfolio-project {
-    font-size: 50px;
-  }
 
   .portfolio-box-text {
     width: 300px;
@@ -1577,8 +1567,7 @@ footer {
     font-size: 15px;
     line-height: 20px;
   }
-  .portfolio-project-btn {
-  }
+
   .porfolio-img-1 {
     border-radius: 20px;
     width: 260px;
@@ -1715,9 +1704,6 @@ footer {
 
   /* section 3 */
 
-  .portfolio-project {
-    font-size: 50px;
-  }
   .portfolio-project-box,
   .portfolio-project-box-2,
   .portfolio-project-box-3 {
