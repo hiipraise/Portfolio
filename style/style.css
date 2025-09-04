@@ -430,16 +430,17 @@ ul {
 .project-section {
   align-items: center;
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .portfolio-project {
   font-weight: 600;
   font-size: 48px;
-  line-height: 61.6px;
   text-align: center;
   color: #242a41;
   @media (max-width: 500px) {
     font-size: 2rem;
-    line-height: 2.5rem;
   }
 }
 .portfolio-box {
@@ -460,6 +461,7 @@ ul {
   justify-content: space-evenly;
   @media (max-width: 500px) {
     max-width: 300px;
+    padding: 2rem;
   }
   border-radius: 30px;
   background-color: #120d36;
@@ -864,12 +866,6 @@ footer {
   }
 
   /* section 3 */
-
-  .portfolio-project-box,
-  .portfolio-project-box-2,
-  .portfolio-project-box-3 {
-    border-radius: 10px;
-  }
 
   .portfolio-box-text {
     width: 300px;
@@ -1376,9 +1372,6 @@ footer {
   }
 
   /* section 3 */
-  .portfolio-project {
-    font-size: 50px;
-  }
 
   .portfolio-box-text {
     width: 300px;
@@ -1537,9 +1530,6 @@ footer {
 
   /* section 3 */
 
-  .portfolio-project {
-    font-size: 50px;
-  }
   .portfolio-project-box,
   .portfolio-project-box-2,
   .portfolio-project-box-3 {
@@ -1703,12 +1693,6 @@ footer {
   }
 
   /* section 3 */
-
-  .portfolio-project-box,
-  .portfolio-project-box-2,
-  .portfolio-project-box-3 {
-    flex-direction: column;
-  }
 
   .btn-portfolio-text-1 {
     margin-top: 20px;
