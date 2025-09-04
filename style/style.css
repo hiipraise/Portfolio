@@ -461,7 +461,7 @@ ul {
   justify-content: space-evenly;
   @media (max-width: 500px) {
     max-width: 300px;
-    padding: 2rem;
+    padding: 3rem;
   }
   border-radius: 30px;
   background-color: #120d36;
